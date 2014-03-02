@@ -32,7 +32,8 @@ user    21m47.763s
 sys     0m18.977s
 ````
 
-As you can see, the code was optimized for parallel execution.
+As you can see, the code was optimized for parallel execution. If you know how
+to make the code even more efficient, please let me know.
 
 ## How Does It Work?
 
