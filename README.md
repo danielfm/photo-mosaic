@@ -4,10 +4,10 @@ Photographic mosaic experiment in Clojure.
 
 ## Motivation
 
-Why not? :-)
+During a boring weekend, I proposed the following programming challenge to
+myself: _build Monalisa from Pablo Picasso's paintings._
 
-During a boring weekend, I proposed a programming challenge to myself:
-_how can I recreate Monalisa using only Pablo Picasso's paintings?_
+And just so you know, I wasn't high. :)
 
 ## Results
 
@@ -24,8 +24,8 @@ This is the highlighted section in more details:
 This image was generated using a corpus with 3,588 images of Pablo Picasso's
 paintings and drawings.
 
-The script took about 5 minutes to complete in my machine, a quad-core (8
-threads) Intel i7-920@2GHz with 8GB of RAM:
+The script took about 5 minutes to complete in my laptop with a quad-core (8
+threads, 8M cache) Intel i7-920@2GHz processor with 8GB of RAM:
 
 ````bash
 $ time lein run -w 40 -s ./resources/pics/ -t ./tmp/tiles/ -o ./tmp/out.jpg \
@@ -41,10 +41,9 @@ As you can see, the code was optimized for parallel execution.
 
 ## How Does It Work?
 
-The first step is to generated a scaled down and cropped version of each
-image to be used to create the desired picture. After that, we calculate
-the average color of each image and store them in a
-[_k_-d tree](http://en.wikipedia.org/wiki/K-d_tree).
+The first step is to crop and scale down each image to be used to recreate the
+desired picture. After that, we calculate the average color of each of those
+images and store them in a [_k_-d tree](http://en.wikipedia.org/wiki/K-d_tree).
 
 Then, for each pixel in the desired picture, we perform a nearest neighbor
 search in the _k_-d tree in order to find the image with the closest average
@@ -52,8 +51,8 @@ color. The distance measure used is the
 [squared distance](http://en.wikipedia.org/wiki/Euclidean_distance), which
 provides a good balance between performance and correctness. (There are other
 distance functions that model the
-[human eye perception](http://en.wikipedia.org/wiki/Color_vision) more accurately,
-but they are much more complex and expensive to compute).
+[human eye perception](http://en.wikipedia.org/wiki/Color_vision) more
+accurately, but they are much more complex and expensive to compute).
 
 ## Usage
 
