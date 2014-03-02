@@ -1,4 +1,5 @@
 (ns photo-mosaic.image
+  (:require [clojure.core.reducers :as r])
   (:import [java.io File]
            [javax.imageio ImageIO]
            [java.awt Color Graphics2D RenderingHints]
@@ -57,7 +58,7 @@
         ys (range 0 (image-height img) step-size)
         total (* (count xs) (count ys))
         pixels (for [x xs y ys] (pixel-rgb img x y))]
-    (vec (map #(int (/ % total)) (apply map + pixels)))))
+    (into [] (r/map #(int (/ % total)) (apply map + pixels)))))
 
 (defn ^BufferedImage crop-image-squared
   "Returns a centered square crop of img."

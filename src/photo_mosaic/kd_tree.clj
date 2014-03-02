@@ -1,11 +1,12 @@
-(ns photo-mosaic.kd-tree)
+(ns photo-mosaic.kd-tree
+  (:require [clojure.core.reducers :as r]))
 
 (defrecord Node [loc axis left right])
 
 (defn squared-distance
   "Computes the squared distance between two vectors."
   [x y]
-  (reduce + (map #(Math/pow % 2) (map - x y))))
+  (r/fold + (r/map #(Math/pow % 2) (map - x y))))
 
 (defn euclidean-distance
   "Computes the Euclidean distance between two vectors."

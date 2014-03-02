@@ -27,10 +27,9 @@ quad-core (8 threads, 8M cache) Intel i7-920@2GHz processor and 8GB of RAM:
 $ time lein run -w 40 -s ./resources/pics/ -t ./tmp/tiles/ -o ./tmp/out.jpg \
   ./resources/monalisa.jpg
 
-real    5m28.115s
-user    26m31.147s
-sys     0m22.193s
-
+real    4m31.411s
+user    21m47.763s
+sys     0m18.977s
 ````
 
 As you can see, the code was optimized for parallel execution.

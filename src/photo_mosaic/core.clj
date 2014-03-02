@@ -29,9 +29,8 @@
   [tile-size src-dir out-dir]
   (let [in (File. src-dir)
         out (File. out-dir)]
-    (into {}
-          (pmap #(process-tile % tile-size out)
-                (files-from-dir file-ext in)))))
+    (into {} (pmap #(process-tile % tile-size out)
+                   (files-from-dir file-ext in)))))
 
 (defn usage [options-summary]
   (->> ["Photo Mosaic Generator"
@@ -68,11 +67,11 @@
      (not= (count arguments) 1) (exit 1 (usage summary))
      errors (exit 1 (error-msg errors)))
     (let [{:keys [src tmp width out]} options
-          tile-data (process-jpg-dir width src tmp)
-          palette-tree (kd-tree (keys tile-data))
           input-img (load-image (File. (first arguments)))
           out-img   (new-image-rgb (* width (image-width input-img))
-                                   (* width (image-height input-img)))]
+                                   (* width (image-height input-img)))
+          tile-data (process-jpg-dir width src tmp)
+          palette-tree (kd-tree (keys tile-data))]
       (doall
        (pmap (fn [[x y]]
                (let [pixel (pixel-rgb input-img x y)
