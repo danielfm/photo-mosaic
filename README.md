@@ -1,7 +1,7 @@
 # photo-mosaic
 
 During a boring weekend, I proposed the following programming challenge to
-myself: _build Monalisa from Pablo Picasso's paintings._
+myself: _build Mona Lisa from Pablo Picasso's paintings._
 
 And just so you know, I wasn't high. :)
 
