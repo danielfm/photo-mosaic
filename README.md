@@ -1,9 +1,5 @@
 # photo-mosaic
 
-Photographic mosaic experiment in Clojure.
-
-## Motivation
-
 During a boring weekend, I proposed the following programming challenge to
 myself: _build Monalisa from Pablo Picasso's paintings._
 
