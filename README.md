@@ -17,8 +17,8 @@ This is the highlighted section in more details:
 
 ![zoom](./resources/doc-img/demo-2.jpg)
 
-This image was generated using a corpus of 3,588 images of Pablo Picasso's
-paintings and drawings [[magnet link](magnet:?xt=urn:btih:164f8babe5bb2b6277656842ba2583334add7cc7&dn=Pablo%20Picasso%20Paintings%201881%20-%201973%20-%20Art%20By%20Nrg&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337)].
+This image was generated using a [corpus](http://torrentz.eu/164f8babe5bb2b6277656842ba2583334add7cc7)
+of 3,588 images of Pablo Picasso's paintings and drawings.
 
 The script took about 5 minutes to complete in my laptop equipped with a
 quad-core (8 threads, 8M cache) Intel i7-920@2GHz processor and 8GB of RAM:
