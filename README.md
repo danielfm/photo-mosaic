@@ -21,11 +21,11 @@ This is the highlighted section in more details:
 
 ![zoom](./resources/doc-img/demo-2.jpg)
 
-This image was generated using a corpus with 3,588 images of Pablo Picasso's
+This image was generated using a corpus of 3,588 images of Pablo Picasso's
 paintings and drawings.
 
-The script took about 5 minutes to complete in my laptop with a quad-core (8
-threads, 8M cache) Intel i7-920@2GHz processor with 8GB of RAM:
+The script took about 5 minutes to complete in my laptop equipped with a
+quad-core (8 threads, 8M cache) Intel i7-920@2GHz processor and 8GB of RAM:
 
 ````bash
 $ time lein run -w 40 -s ./resources/pics/ -t ./tmp/tiles/ -o ./tmp/out.jpg \
