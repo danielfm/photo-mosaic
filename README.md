@@ -8,14 +8,14 @@ And just so you know, I wasn't high. :)
 ## Results
 
 Here goes a _thumbnail_ of the resulting image. Believe it or not, the
-[original image](./resources/doc-img/demo-full.jpg.7z)'s resolution is
+[original image](./img/demo-full.jpg.7z)'s resolution is
 13960x20800 with over a hundred megabytes (113.7M to be more precise):
 
-![thumb](./resources/doc-img/demo-1.jpg)
+![thumb](./img/demo-1.jpg)
 
 This is the highlighted section in more details:
 
-![zoom](./resources/doc-img/demo-2.jpg)
+![zoom](./img/demo-2.jpg)
 
 This image was generated using a [corpus](http://torrentz.eu/164f8babe5bb2b6277656842ba2583334add7cc7)
 of 3,588 images of Pablo Picasso's paintings and drawings.
@@ -24,8 +24,8 @@ The script took about 5 minutes to complete in my laptop equipped with a
 quad-core (8 threads, 8M cache) Intel i7-920@2GHz processor and 8GB of RAM:
 
 ````bash
-$ time lein run -w 40 -s ./resources/pics/ -t ./tmp/tiles/ -o ./tmp/out.jpg \
-  ./resources/monalisa.jpg
+$ time lein run -w 40 -s <picasso-img-dir> -t ./tmp/ \
+  -o ./tmp/output.jpg ./img/mona-lisa-original.jpg
 
 real    4m31.411s
 user    21m47.763s

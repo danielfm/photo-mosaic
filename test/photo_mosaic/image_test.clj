@@ -6,7 +6,7 @@
 (def ^:dynamic *img*)
 
 (defn load-img [t]
-  (binding [*img* (load-image (File. "resources/img-01.jpg"))]
+  (binding [*img* (load-image (File. "img/img-01.jpg"))]
     (t)))
 
 (use-fixtures :each load-img)
