@@ -3,7 +3,7 @@
   :url "https://github.com/danielfm/photo-mosaic"
   :license {:name "BSD 2-Clause License"
             :url "http://opensource.org/licenses/BSD-2-Clause"}
-  :dependencies [[org.clojure/clojure "1.5.1"]
-                 [org.clojure/tools.cli "0.3.1"]]
+  :dependencies [[org.clojure/clojure "1.10.0"]
+                 [org.clojure/tools.cli "0.4.2"]]
   :aot :all
   :main photo-mosaic.core)

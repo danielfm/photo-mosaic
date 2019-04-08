@@ -17,8 +17,8 @@ This is the highlighted section in more details:
 
 ![zoom](./img/demo-2.jpg)
 
-This image was generated using a [corpus](http://torrentz.eu/164f8babe5bb2b6277656842ba2583334add7cc7)
-of 3,588 images of Pablo Picasso's paintings and drawings.
+This image was generated using a corpus of 3,588 images of Pablo Picasso's
+paintings and drawings.
 
 The script took about 5 minutes to complete in my laptop equipped with a
 quad-core (8 threads, 8M cache) Intel i7-920@2GHz processor and 8GB of RAM:
@@ -34,6 +34,10 @@ sys     0m18.977s
 
 As you can see, the code was optimized for parallel execution. If you know how
 to make the code even more efficient, please let me know.
+
+**Note**: You can use a smaller corpus, but the output image quality will vary
+(for better or worse) depending on how diverse the input palette generated from
+the corpus is.
 
 ## How Does It Work?
 

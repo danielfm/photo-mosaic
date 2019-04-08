@@ -7,7 +7,7 @@
             [clojure.tools.cli :refer [parse-opts]]))
 
 ;; Only supports JPEG files for now
-(def file-ext #"\.jpg$")
+(def file-ext #"(?i)\.jpg$")
 
 (defn files-from-dir
   "Lists all files recursively from dir that matches regexp re."
